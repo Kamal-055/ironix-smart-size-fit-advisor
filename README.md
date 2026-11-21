@@ -457,6 +457,14 @@ The following public IRONIX pages were used as references:
 | Live Demo | https://inronix-task2.netlify.app |
 
 ---
+## AI Assistance Disclosure
+
+AI tools were used as development assistance during
+planning, code review, documentation preparation,
+and troubleshooting.
+
+The implementation, testing, and technical decisions
+should be reviewed and understood by the author.
 
 ## Developed By
 
