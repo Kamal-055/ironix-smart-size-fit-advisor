@@ -1,33 +1,43 @@
 # IRONIX | Smart Size & Fit Advisor
 
 <p align="center">
-  <strong>An interactive sizing assistant prototype for apparel e-commerce</strong>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Project-Technical%20Assessment-111111?style=for-the-badge" alt="Technical Assessment">
+  <img src="https://img.shields.io/badge/IRONIX-Technical%20Assessment-111111?style=for-the-badge" alt="IRONIX Assessment">
   <img src="https://img.shields.io/badge/HTML5-Frontend-orange?style=for-the-badge&logo=html5" alt="HTML5">
   <img src="https://img.shields.io/badge/CSS3-Styling-blue?style=for-the-badge&logo=css3" alt="CSS3">
   <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript" alt="JavaScript">
 </p>
 
 <p align="center">
-  <em>Helping customers make more informed apparel sizing decisions through an interactive measurement-based experience.</em>
+  <strong>An interactive, measurement-based sizing assistant for apparel e-commerce.</strong>
 </p>
+
+<p align="center">
+  <a href="https://inronix-task2.netlify.app">
+    <img src="https://img.shields.io/badge/🚀_LIVE_DEMO-Visit_Application-111111?style=for-the-badge" alt="Live Demo">
+  </a>
+</p>
+
+---
+
+## Live Demo
+
+**Try the application:** https://inronix-task2.netlify.app
+
+The prototype demonstrates how customers can enter their body measurements, select their preferred fit, receive a size recommendation, check sample product availability and interact with a simulated shopping cart.
 
 ---
 
 ## Project Overview
 
-The **IRONIX Smart Size & Fit Advisor** is a standalone frontend prototype developed as part of the IRONIX Web Development Technical Assessment.
+The **IRONIX Smart Size & Fit Advisor** is a standalone frontend prototype developed for Task 2 – Custom Shopify Functionality of the IRONIX Web Development Technical Assessment.
 
-Choosing the correct clothing size online can be challenging because customers cannot physically try on products before purchasing them.
+Choosing the correct apparel size online can be challenging because customers cannot physically try on products before purchasing them.
 
-Traditional size charts provide measurements, but customers may still struggle to interpret them, particularly when their measurements fall between available size ranges.
+Traditional size charts provide measurement ranges, but customers may still struggle to interpret them, especially when their measurements fall between available sizes.
 
-This project introduces an interactive sizing assistant that uses customer measurements and fit preferences to provide size suggestions, explain sizing uncertainty, and display product availability using sample inventory data.
+This project introduces an interactive sizing assistant that helps customers make more informed size selections through measurement validation, fit preferences, size recommendations and availability information.
 
-> **Note:** This is an independent assessment prototype. It is not connected to the live IRONIX Shopify store.
+> This is an independent technical assessment prototype. It is not connected to the live IRONIX Shopify store.
 
 ---
 
@@ -35,106 +45,90 @@ This project introduces an interactive sizing assistant that uses customer measu
 ## Key Features
 
 ### 1. Smart Size Recommendation
-
 - Enter chest measurement and height.
 - Switch between inches and centimetres.
-- Select a preferred fit:
-  - Snug
-  - Regular
-  - Relaxed
-- Receive a size suggestion based on configured measurement rules.
-- View alternative size suggestions when applicable.
+- Select a preferred fit: Snug, Regular or Relaxed.
+- Receive a size suggestion based on configured sizing rules.
+- View alternative size suggestions where applicable.
 - See confidence labels and sizing explanations.
 
 ### 2. Measurement Validation
-
-The application validates customer inputs before generating a recommendation.
-
 - Empty input validation.
 - Non-numeric input validation.
-- Negative measurement rejection.
-- Configured minimum and maximum measurement checks.
+- Unrealistic measurement rejection.
+- Configured measurement limits.
 - Fit preference validation.
 - Out-of-chart measurement handling.
 
 ### 3. Product Colour Selection
-
-Customers can switch between sample product colours:
-
+Explore four sample product colours:
 - Black
 - White
 - Green
 - Maroon
 
-The product interface updates based on the selected colour.
+The product interface updates according to the selected colour.
 
 ### 4. Sample Inventory Availability
-
-The prototype demonstrates:
-
-- In-stock sizes.
+- In-stock size indicators.
 - Low-stock notifications.
 - Sold-out size handling.
 - Alternative size availability.
-- Back-in-stock notification form validation.
+- Back-in-stock email form validation.
 
-**Inventory disclaimer:** Stock quantities are invented sample data for demonstration purposes. They do not represent actual IRONIX inventory.
+**Note:** Inventory quantities are sample data created for demonstration. They do not represent actual IRONIX stock.
 
 ### 5. Interactive Shopping Cart
-
-- Add a recommended size to the cart.
-- Remove items.
+- Add recommended sizes to the cart.
+- Remove cart items.
 - View item quantities.
-- Calculate subtotal.
-- Prevent adding quantities beyond the configured sample stock.
+- Calculate the subtotal.
+- Prevent adding quantities beyond configured sample stock.
 - Close the cart using the Escape key.
 
 The cart is simulated. Checkout and payment functionality are not connected.
 
-### 6. Responsive User Interface
-
+### 6. Responsive Interface
 - Dark IRONIX-inspired visual design.
 - Responsive product layout.
 - Mobile-friendly measurement form.
 - Interactive size chart.
-- Accessible labels and validation messages.
+- Form validation messages.
 - Keyboard interaction support.
 
 ---
 
-## Application Preview
-
-The prototype demonstrates the following user journey:
+## User Journey
 
 ```text
-Open Product Page
-       |
-       v
-Select Product Colour
-       |
-       v
-Enter Chest Measurement
-       |
-       v
-Enter Height
-       |
-       v
-Select Preferred Fit
-       |
-       v
-Validate Measurements
-       |
-       v
-Calculate Size Suggestion
-       |
-       v
-Check Sample Stock
-       |
-       v
-Display Recommendation
-       |
-       v
-Add Available Size to Cart
+       Product Page
+            |
+            v
+      Select Colour
+            |
+            v
+   Enter Chest Measurement
+            |
+            v
+      Enter Height
+            |
+            v
+    Select Preferred Fit
+            |
+            v
+    Validate Measurements
+            |
+            v
+     Calculate Size
+            |
+            v
+   Check Sample Inventory
+            |
+            v
+   Display Recommendation
+            |
+            v
+       Add to Cart
 ```
 
 ---
@@ -144,13 +138,14 @@ Add Available Size to Cart
 | Technology | Purpose |
 |---|---|
 | HTML5 | Application structure |
-| CSS3 | Layout, styling and responsiveness |
-| JavaScript (ES6) | Application logic and interactions |
+| CSS3 | Styling and responsive layout |
+| JavaScript ES6 | Application logic and interactions |
 | Node.js | JavaScript unit testing |
 | Playwright | Browser automation and end-to-end testing |
 | Python | Running browser test scripts |
 | Git | Version control |
 | GitHub | Source code management |
+| Netlify | Prototype hosting |
 
 The application uses vanilla JavaScript without a frontend framework or backend server.
 
@@ -161,44 +156,35 @@ The application uses vanilla JavaScript without a frontend framework or backend 
 ```text
 ironix-smart-size-fit-advisor/
 │
-├── css/
-│   └── styles.css
+├── prototype/
+│   ├── css/
+│   │   └── styles.css
+│   │
+│   ├── data/
+│   │   └── products.js
+│   │
+│   ├── js/
+│   │   ├── app.js
+│   │   └── size-engine.js
+│   │
+│   ├── tests/
+│   │   ├── e2e.py
+│   │   └── size-engine.test.js
+│   │
+│   └── index.html
 │
-├── data/
-│   └── products.js
-│
-├── js/
-│   ├── app.js
-│   └── size-engine.js
-│
-├── tests/
-│   ├── e2e.py
-│   └── size-engine.test.js
-│
-├── index.html
 └── README.md
 ```
-
-### File Responsibilities
-
-| File | Description |
-|---|---|
-| `index.html` | Main product page and application structure |
-| `css/styles.css` | Visual design and responsive styling |
-| `data/products.js` | Sample product, colour, price and inventory data |
-| `js/app.js` | UI interactions, product rendering and cart functionality |
-| `js/size-engine.js` | Measurement validation and size recommendation logic |
-| `tests/size-engine.test.js` | Automated unit tests |
-| `tests/e2e.py` | Browser-based end-to-end tests |
-| `README.md` | Project documentation |
 
 ---
 
 ## How the Recommendation Engine Works
 
-The recommendation engine is implemented in `js/size-engine.js`.
+The sizing logic is implemented in:
 
-It is designed as a set of reusable JavaScript functions, separate from the user interface.
+`prototype/js/size-engine.js`
+
+The engine is separated from the user interface and uses reusable JavaScript functions for validation, measurement conversion, recommendation generation and stock checking.
 
 ### Measurement Inputs
 
@@ -219,8 +205,6 @@ inches = centimetres / 2.54;
 
 ### Configured Size Chart
 
-The prototype uses the following sizing configuration:
-
 | Size | Chest Range (inches) | Back Length (inches) |
 |---|---:|---:|
 | S | 36–38 | 26 |
@@ -228,48 +212,42 @@ The prototype uses the following sizing configuration:
 | L | 40–42 | 28 |
 | XL | 42–44 | 28 |
 
-**Sizing assumption:** The live IRONIX size guide lists XL as 40–44 inches, which overlaps the L range of 40–42 inches. For the prototype's recommendation engine, XL is configured as 42–44 inches to create non-overlapping ranges. This adjustment is an implementation assumption and requires confirmation from IRONIX.
+**Sizing assumption:** The published IRONIX product chart lists XL as 40–44 inches, overlapping the L range of 40–42 inches. To make the prototype's sizing engine operate with non-overlapping ranges, XL is configured as 42–44 inches. This adjustment is an assumption and requires confirmation from IRONIX.
 
 ### Fit Preference Logic
 
-The current prototype applies the following ease allowances:
-
-| Fit preference | Configured ease |
+| Fit preference | Configured ease allowance |
 |---|---:|
 | Snug | 0 inches |
 | Regular | 1 inch |
 | Relaxed | 2 inches |
 
-These are prototype assumptions, not verified IRONIX garment-fitting specifications.
+These values are prototype assumptions, not verified IRONIX garment-fitting specifications.
 
-### Recommendation Status
+### Recommendation Handling
 
-The engine can return different recommendation states:
+The engine handles:
 
-| Status | Meaning |
-|---|---|
-| Match | Measurement falls within a configured size range |
-| Between | Measurement is at a shared size boundary |
-| Below chart | Measurement is below the configured size range |
-| Above chart | Measurement is above the configured size range |
-| Out of range | Measurement is outside the supported recommendation range |
-
-The engine also provides confidence labels and optional alternative sizes.
+- Clear size matches.
+- Measurements at size boundaries.
+- Measurements close to a size boundary.
+- Measurements below the configured chart.
+- Measurements above the configured chart.
+- Measurements outside the supported recommendation range.
+- Height-based length notes.
+- Stock availability and alternative sizes.
 
 ---
 
-## Getting Started
+## Installation and Local Setup
 
 ### Prerequisites
 
-Install the following:
-
-- [Node.js](https://nodejs.org/)
-- npm (included with Node.js)
-- [Git](https://git-scm.com/)
-- A code editor such as Visual Studio Code
-
-Python is additionally required for the Playwright browser tests.
+- Node.js
+- npm
+- Python 3 (for browser tests)
+- Git
+- Visual Studio Code or another code editor
 
 ### 1. Clone the Repository
 
@@ -279,41 +257,37 @@ git clone https://github.com/YOUR-USERNAME/ironix-smart-size-fit-advisor.git
 
 ### 2. Navigate to the Project
 
-```bash
-cd ironix-smart-size-fit-advisor
-```
-
-If your source files are inside a folder named `prototype`, navigate into that folder before running the application:
+If the files are inside the `prototype` directory:
 
 ```bash
-cd prototype
+cd ironix-smart-size-fit-advisor/prototype
 ```
 
 ### 3. Run the Application
 
-This is a static HTML application. No npm installation or build process is required.
+This is a static HTML, CSS and JavaScript application. No npm installation or build process is required.
 
-You can open `index.html` directly in your browser.
-
-Alternatively, run a local development server:
+Start a local server:
 
 ```bash
 python -m http.server 8000
 ```
 
-Open:
+Open the application:
 
 ```text
 http://localhost:8000
 ```
 
+Alternatively, open `index.html` directly in a browser.
+
 ---
 
 ## Testing
 
-Testing is included to validate the recommendation engine and the main browser interactions.
+The project includes unit tests and browser-based end-to-end tests.
 
-### Unit Testing
+### Unit Tests
 
 The recommendation engine uses Node.js's built-in test runner.
 
@@ -323,20 +297,20 @@ Run:
 node --test tests/size-engine.test.js
 ```
 
-The test suite covers:
+The unit tests cover:
 
-- Empty and invalid measurements.
-- Non-numeric and negative input.
-- Valid size matching.
+- Input validation.
+- Invalid and negative measurements.
+- Size matching.
 - Fit preference adjustments.
-- Size boundary handling.
+- Boundary handling.
 - Alternative size suggestions.
 - Measurements outside the chart.
 - Centimetre-to-inch conversion.
 - Height-based notes.
-- Sample stock availability.
+- Stock availability.
 
-### End-to-End Testing
+### End-to-End Tests
 
 The browser tests use Python and Playwright.
 
@@ -352,7 +326,7 @@ Install Chromium:
 playwright install chromium
 ```
 
-Run the test:
+Run the browser tests:
 
 ```bash
 python tests/e2e.py
@@ -360,51 +334,50 @@ python tests/e2e.py
 
 The browser tests cover:
 
-- Form validation.
+- Empty form validation.
+- Invalid measurement handling.
 - Size recommendation flow.
-- Alternative size availability.
-- Sold-out product handling.
-- Email input validation.
+- Boundary and alternative size cases.
+- Sold-out size handling.
+- Back-in-stock email validation.
 - Cart functionality.
 - Sample inventory limits.
-- Keyboard interaction.
+- Escape-key interaction.
 - Mobile responsiveness.
 - Browser console and page errors.
 
-The browser test script saves screenshots under:
+The test script saves screenshots in:
 
 ```text
 ../docs/screenshots/prototype/
 ```
 
-Run the tests in an environment where Chromium can launch successfully.
+Run the browser tests in an environment where Chromium can launch successfully.
 
 ---
 
 ## Shopify Integration Approach
 
-The current application is a standalone frontend prototype and does not connect to the live IRONIX Shopify store.
+The current application is a standalone frontend prototype and does not connect to or modify the live IRONIX Shopify store.
 
-A production implementation could be integrated into a Shopify product page through a theme app extension or an appropriately developed theme section.
+A production version could be integrated into a Shopify product page through a theme app extension or an appropriately developed theme section.
 
 ### Proposed Integration Flow
 
 1. Add the advisor interface to the relevant Shopify product page.
 2. Retrieve verified product-specific size information.
-3. Pass the sizing data to the recommendation engine.
-4. Display suggested sizes and relevant explanations.
+3. Pass sizing data to the recommendation engine.
+4. Display size recommendations and explanations.
 5. Connect the customer's size selection to the existing Shopify variant selector.
-6. Validate variant availability before adding the product to the Shopify cart.
+6. Check actual variant availability before adding the product to the Shopify cart.
 
 ### Production Requirements
 
-A production version would require:
-
-- Verified sizing and garment measurement data.
+- Verified garment measurement and sizing information.
 - Shopify product and variant integration.
 - Live inventory availability.
 - Appropriate customer-facing error handling.
-- Testing across supported devices and browsers.
+- Cross-device and browser testing.
 
 These integrations are outside the scope of the current prototype.
 
@@ -414,17 +387,15 @@ These integrations are outside the scope of the current prototype.
 
 ### Self-Service Order Change Request
 
-Another functionality considered during the assessment is a self-service order change request interface.
+The second functionality considered for the assessment is a self-service order change request interface.
 
-The proposed feature would allow customers to submit eligible size modification or cancellation requests within the applicable order policy window.
+The proposed feature could allow customers to:
 
-Potential functionality:
-
-- Order reference input.
-- Order eligibility checks.
-- Size modification request.
-- Cancellation request.
-- Request confirmation.
+- Enter an order reference.
+- Check request eligibility.
+- Submit an eligible size modification request.
+- Request cancellation where permitted.
+- Receive request confirmation.
 
 This feature is a proposal only and is not implemented in this repository.
 
@@ -434,27 +405,23 @@ A real implementation would require secure order verification and backend integr
 
 ## Limitations and Assumptions
 
-This prototype is intended to demonstrate functionality, not a complete production e-commerce system.
-
 | Area | Current limitation |
 |---|---|
-| Size chart | XL range is adjusted to 42–44 inches as a prototype assumption |
+| Size chart | XL is configured as 42–44 inches as a prototype assumption |
 | Fit allowance | Ease values are assumed and require brand validation |
 | Product inventory | Uses invented sample quantities |
 | Product data | Uses sample product information |
 | Shopping cart | Frontend simulation only |
 | Checkout | Not connected |
-| Back-in-stock form | Validates input but does not send an email |
+| Back-in-stock form | Validates the email but does not send notifications |
 | Shopify | No live store integration |
 | Customer data | No customer accounts or personal data storage |
 
-The prototype does not claim measured improvements in conversion rates, customer satisfaction, or return reduction. Such outcomes would require real-world testing and store analytics.
+The prototype does not claim measured improvements in conversion rates, customer satisfaction or return reduction. Such outcomes would require real-world testing and store analytics.
 
 ---
 
 ## Future Enhancements
-
-Potential improvements include:
 
 - Verified product-specific sizing rules.
 - Shopify product variant integration.
@@ -469,7 +436,7 @@ Potential improvements include:
 
 ## References
 
-The following public IRONIX pages were used as references during the assessment:
+The following public IRONIX pages were used as references:
 
 - [IRONIX Rib Tank – Black](https://ironix.in/products/ironix-rib-tank-black)
 - [IRONIX FAQ](https://ironix.in/pages/faqs)
@@ -480,22 +447,28 @@ The following public IRONIX pages were used as references during the assessment:
 
 ## Assessment Information
 
-**Assessment:** IRONIX Web Development Technical Assessment  
-**Task:** Task 2 – Custom Shopify Functionality  
-**Selected Feature:** Smart Size & Fit Advisor  
-**Implementation:** Standalone interactive frontend prototype
-
-### Developed By
-
-**Kamala Kannan**
+| Detail | Information |
+|---|---|
+| Assessment | IRONIX Web Development Technical Assessment |
+| Task | Task 2 – Custom Shopify Functionality |
+| Selected Feature | Smart Size & Fit Advisor |
+| Implementation | Standalone interactive frontend prototype |
+| Hosting | Netlify |
+| Live Demo | https://inronix-task2.netlify.app |
 
 ---
 
+## Developed By
+
+**Kamala Kannan**
+
+*IRONIX Web Development Technical Assessment*
+
 <p align="center">
   <strong>IRONIX Smart Size & Fit Advisor</strong><br>
-  <em>Making online size selection more informed and transparent.</em>
+  Making online size selection more informed and transparent.
 </p>
 
 <p align="center">
-  Built as an independent technical assessment prototype.
+  <em>Independent technical assessment prototype — not an official IRONIX product or live Shopify integration.</em>
 </p>
