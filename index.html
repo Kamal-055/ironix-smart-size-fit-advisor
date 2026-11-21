@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IRONIX Size &amp; Fit Advisor - Prototype</title>
+<meta name="description" content="Standalone prototype of a size and fit advisor for the IRONIX Keeper rib vest.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="proto-bar" role="note">Standalone prototype by a candidate. Not the live IRONIX store. Stock numbers are sample data.</div>
+<header class="site-header">
+  <a class="logo" href="#" aria-label="IRONIX prototype home">IRONIX</a>
+  <button class="cart-btn" id="cartBtn" type="button" aria-haspopup="dialog">Cart <span id="cartCount" class="cart-count">0</span></button>
+</header>
+
+<main class="wrap">
+  <section class="product" aria-labelledby="pTitle">
+    <div class="visual" id="visual">
+      <svg viewBox="0 0 200 240" role="img" aria-label="Ribbed vest illustration in the selected colour">
+        <path id="vestShape" d="M62 14 L78 14 Q100 44 122 14 L138 14 L150 70 Q146 110 152 226 L48 226 Q54 110 50 70 Z" />
+        <g id="ribs" stroke-width="1.5" opacity=".16"></g>
+      </svg>
+      <p class="visual-caption" id="colourCaption"></p>
+    </div>
+    <div class="info">
+      <p class="eyebrow">IRONIX First Drop</p>
+      <h1 id="pTitle">The Keeper Rib Vest</h1>
+      <p class="price"><strong id="price"></strong> <s id="mrp"></s></p>
+      <fieldset class="swatches"><legend>Colour</legend><div id="swatches" role="radiogroup"></div></fieldset>
+      <p class="policy">Size exchange: first one free within 48 hours of delivery, then Rs. 150 each. Get the size right the first time.</p>
+
+      <div class="advisor" id="advisor">
+        <h2>Find your size</h2>
+        <p class="sub">Two measurements and your preferred fit. Takes 20 seconds.</p>
+        <form id="sizeForm" novalidate>
+          <div class="unit" role="group" aria-label="Units">
+            <button type="button" class="chip is-on" data-unit="in" aria-pressed="true">inches</button>
+            <button type="button" class="chip" data-unit="cm" aria-pressed="false">cm</button>
+          </div>
+          <div class="row">
+            <label class="field">Chest <span class="hint" id="chestHint">Fullest part, in</span>
+              <input id="chest" name="chest" inputmode="decimal" autocomplete="off" aria-describedby="chestErr" placeholder="e.g. 39">
+              <span class="err" id="chestErr" role="alert"></span></label>
+            <label class="field">Height <span class="hint" id="heightHint">in</span>
+              <input id="height" name="height" inputmode="decimal" autocomplete="off" aria-describedby="heightErr" placeholder="e.g. 69">
+              <span class="err" id="heightErr" role="alert"></span></label>
+          </div>
+          <fieldset class="fits"><legend>How should it fit?</legend>
+            <label class="fit"><input type="radio" name="fit" value="snug"><span><b>Snug</b><small>Body-hugging, as designed</small></span></label>
+            <label class="fit"><input type="radio" name="fit" value="regular" checked><span><b>Regular</b><small>Athletic, easy to move in</small></span></label>
+            <label class="fit"><input type="radio" name="fit" value="relaxed"><span><b>Relaxed</b><small>Looser for layering</small></span></label>
+            <span class="err" id="fitErr" role="alert"></span>
+          </fieldset>
+          <button class="primary" type="submit">Find my size</button>
+          <details class="tips"><summary>How to measure your chest</summary>
+            <p>Stand relaxed. Wrap a soft tape under your arms and across the fullest part of your chest. Keep it level and snug, not tight. Do not hold your breath.</p></details>
+        </form>
+
+        <div id="result" class="result" aria-live="polite" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chart" aria-labelledby="chartTitle">
+    <h2 id="chartTitle">Size chart</h2>
+    <div class="table-scroll"><table id="chartTable"><thead><tr><th>Size</th><th>Chest (in)</th><th>Back length (in)</th></tr></thead><tbody></tbody></table></div>
+    <p class="fine">Chest ranges are from the live IRONIX size guide. The published XL row (40-44) overlaps L, so this prototype treats XL as 42-44. IRONIX should confirm garment measurements.</p>
+  </section>
+</main>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
+  <div class="drawer-panel">
+    <div class="drawer-head"><h2 id="drawerTitle">Your cart</h2><button type="button" id="closeCart" class="icon" aria-label="Close cart">&times;</button></div>
+    <ul id="cartList" class="cart-list"></ul>
+    <p class="empty" id="cartEmpty">Your cart is empty.</p>
+    <p class="subtotal">Subtotal <strong id="subtotal">Rs. 0</strong></p>
+    <p class="fine">Prototype only. Checkout is not connected.</p>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="data/products.js"></script>
+<script src="js/size-engine.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
