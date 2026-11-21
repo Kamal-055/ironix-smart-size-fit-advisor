@@ -1,0 +1,2 @@
+# AI disclosure
+I used **Claude (Anthropic)** to: fetch and read the public IRONIX pages, draft the SEO findings, write the prototype code, tests, documentation and this repository structure. I reviewed the outputs, and I can explain the code. Limits: the AI tool could read page text and meta tags but could not take live-site screenshots; all live-site screenshots in my submission are my own. The Shopify Liquid files and JSON-LD snippet were not run on a Shopify store. Prototype tests (10 unit, 18 browser checks in Chromium) were run and passed.
